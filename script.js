@@ -101,7 +101,6 @@ tl.from("#myskills .skill",{
   opacity:0,
   scrollTrigger:{
     scrub:true,
-    markers:true,
     trigger:"#myskills .skill",
     scroller:".container",
     end:"top 25%"

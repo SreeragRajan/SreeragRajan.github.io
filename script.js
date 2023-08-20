@@ -34,10 +34,16 @@ init()
 
 
 var cursor = document.querySelector(".cursor")
+var cursor2 = document.querySelector(".cursor-blur")
+
 document.addEventListener("mousemove", (e) => {
     cursor.style.left = e.x + "px"
     cursor.style.top = e.y + "px"
+    cursor2.style.left = e.x+ "px"
+    cursor2.style.top = e.y+ "px"
 })
+// document.addEventListener("mousemove", (e) => {
+// })
 
 gsap.to("#home .name", {
   x:-300,

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Sreerag Rajan</title>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="container">
+             
+        <div id="home">
+
+            <h2 class="greeting">Hello,</h2>
+            <h1 class="name">I'm Sreerag Rajan</h1>
+            <h1 class="developer">Web Developer</h1>
+            
+            <div class="scroll">
+                <h4 class="scr-dn">Scroll Down</h4>
+                <i class="fa-solid fa-arrow-down-long arrow"></i>
+            </div>
+        </div>
+
+        <div id="about">
+            <h1><em>About me</em></h1>
+            <div class="about-me">
+                <div class="left"><img src="profile.jpeg" alt="profile-img"></div>
+                <div class="right">
+                    <p>My name is SreeRag. I'm a <em><strong>Full Stack Web Developer</strong></em>. I have been working as a web developer for quite some time now. I believe I am a very ambitious person who loves to work on making the website work well. Working on the web is my passion as I love to work on exciting projects.</p>
+
+                    <button class="resume-btn" onClick="window.location.href='Resume.html';">Resume</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="skills">
+            <h1><em>My Skills</em></h1>
+            <div id="myskills">
+                <div class="skill">
+
+                    <div class="technology">
+                        <h3>HTML</h3>
+                        <i class="fa-brands fa-html5 html"></i>
+                    </div>
+                    <div class="bar">
+                        <div class="fill html"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="technology">
+                        <h3>CSS</h3>
+                        <i class="fa-brands fa-css3-alt css"></i>
+                    </div>
+                    <div class="bar">
+                        <div class="fill css"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                <div class="technology">
+                    <h3>JAVASCRIPT</h3>
+                    <i class="fa-brands fa-js javascript"></i>
+                </div>
+                    <div class="bar">
+                        <div class="fill javascript"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                <div class="technology">
+                    <h3>ReactJS</h3>
+                    <i class="fa-brands fa-react reactjs"></i>
+                </div>
+                    <div class="bar">
+                        <div class="fill reactjs"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="technology">
+                        <h3>MongoDB</h3>
+                        <i class="fa-solid fa-database mongodb"></i>
+                    </div>
+                    <div class="bar">
+                        <div class="fill mongodb"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="projects">
+            <h1><em>Projects</em></h1>
+        </div>
+
+        <div id="contact">
+            <h1><em>Contact</em></h1>
+            <form action="mailto:sreeragrajan2002@gmail.com" method="post" class="form">
+                <div>
+                    <label for="">Name</label>
+                    <input type="text" name="name"> 
+                </div>
+                <div>
+                    <label for="">Email</label>
+                    <input type="email" name="email">
+                </div>
+                <div>   
+                    <label for="" class="msg">Message</label><br>
+                    <textarea name="Message" id="message" cols="64" rows="8"></textarea>
+                    <input type="submit" value="Submit"/>
+                </div>
+
+            </form>
+        </div>
+
+        <div id="footer">
+            <div class="socials">
+                <a href="https://www.facebook.com/profile.php?id=100006619578667"style="color: #1A4589;" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/the_mallu_boy_27/" style="color: #DB2984;" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sreerag-rajan-702ba7249/" style="color: #007AB5;" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <h4><span>©</span> 2023 Sreerag Rajan</h4>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>

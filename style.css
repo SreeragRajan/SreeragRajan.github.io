@@ -122,6 +122,7 @@ html, body {
     z-index: 2;
     font-size: 3vw;
     margin-bottom: 20px; 
+    border-bottom: 2px solid black;
 }
 
 .about-me {
@@ -174,19 +175,27 @@ html, body {
     align-items: center;
     justify-content: center;
 }
+/* 
+.skills-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+} */
 
 #skills h1 {
     margin-bottom : 3vw;
     text-align: center;
     font-size: 3vw;
+    border-bottom: 2px solid white;
 }
 
 #myskills {
+    /* padding-right: 8vw; */
     width: 33%;
     height: 70vh;
     display: flex;
     flex-direction: column;
-    
 }
 
 
@@ -249,12 +258,72 @@ html, body {
 
 
 #projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     z-index: 10;
-    height: 100vh;
+    max-height: 100%;
     width: 100%;
     background-color: #dadada;
     color: black;
 }
+
+#projects h1 {
+    font-size: 3vw;
+    margin: 3vw 2vw 2vw 2vw;
+    border-bottom: 2px solid black;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    height: fit-content;
+    width: 80%;
+    margin-bottom: 2vw;
+    background-color: rgb(171, 183, 236);
+    border-radius: 10px;
+    padding: 2vw;
+    position: relative;
+}
+
+.cards .card-item {
+    height: 280px;
+    width: 280px;
+    margin: 1vw;
+    /* background-color: blue; */
+    border-radius: 10px;
+    background-color: #000000;
+    color: white;
+    /* padding: 1.5vw; */
+    position: relative;
+    overflow: hidden;
+}
+.text-content h2 {
+    padding-bottom: 1vw;
+}
+
+.cards .card-item .text-content {
+    background-color: #ffffff6b;
+    border-top: 1px solid white;
+    padding: 2vw;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(60%);
+    transition: all 0.3s;
+}
+.cards .card-item:hover .text-content{
+    transform: translateY(0%);
+}
+
+
+.cards .card-item h3 {
+    font-size: 1.2vw;
+    font-weight: 400;
+}
+
 
 #contact {
     z-index: 10;
@@ -282,6 +351,7 @@ html, body {
 #contact h1 {
     margin-top: 1.5vw;
     font-size: 3vw;
+    border-bottom: 2px solid rgb(255, 255, 255);
 }
 
 .form div {
@@ -295,7 +365,6 @@ label {
 
 input{
     outline: none;
-    /* margin-top: 0.2vw; */
     width: 100%;
     padding: 0.7vw;
     border: none;
@@ -315,7 +384,6 @@ textarea {
     border: none;
     border-radius: 5px;
     background-color: #dadada;
-    /* margin-top: 1vw; */
 }
 
 input[type="submit"] {
@@ -348,3 +416,4 @@ input[type="submit"] {
     margin-top: 1vw;
     font-weight: 400;
 }
+

@@ -42,8 +42,6 @@ document.addEventListener("mousemove", (e) => {
     cursor2.style.left = e.x+ "px"
     cursor2.style.top = e.y+ "px"
 })
-// document.addEventListener("mousemove", (e) => {
-// })
 
 gsap.to("#home .name", {
   x:-300,

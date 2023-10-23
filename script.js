@@ -32,25 +32,13 @@ ScrollTrigger.refresh();
 
 init()
 
-
-var cursor = document.querySelector(".cursor")
-var cursor2 = document.querySelector(".cursor-blur")
-
-document.addEventListener("mousemove", (e) => {
-    cursor.style.left = e.x + "px"
-    cursor.style.top = e.y + "px"
-    cursor2.style.left = e.x+ "px"
-    cursor2.style.top = e.y+ "px"
-})
-
 gsap.to("#home .name", {
   x:-300,
   scrollTrigger: {
     trigger:"#home .name",
     scroller:".container",
-    // markers:true,
-    start:"top 20%",
-    end:"top 0%",
+    start:"top 40%",
+    end:"top 5%",
     scrub:2
   }
 })
@@ -58,11 +46,10 @@ gsap.to("#home .name", {
 gsap.to("#home .developer", {
   x:300,
   scrollTrigger: {
-    // markers:true,
     trigger:"#home .developer",
     scroller:".container",
-    start:"top 35%",
-    end:"top 15%",
+    start:"top 50%",
+    end:"top 10%",
     scrub:2
   }
 })
@@ -75,25 +62,25 @@ gsap.to(".scroll .arrow", {
 
 
 gsap.from("#about img", {
-  x:-200,
+  transition:"all ease 0.5s",
+  scale:0,
+  duration:1,
   scrollTrigger: {
-    // markers:true,
     trigger:"#about img",
     scroller:".container",
-    scrub:2, 
-    start: "top 100%",
+    start: "top 120%",
     end: "top 50%"
   }
 })
 
 gsap.from("#about p", {
-  x:200,
+  y:50,
+  opacity:0,
   scrollTrigger: {
-    // markers:true,
+    scrub: 2,
     trigger:"#about p",
     scroller:".container",
-    scrub:2, 
-    start: "top 100%",
+    start: "top 80%",
     end: "top 50%"
   }
 })
@@ -109,4 +96,15 @@ tl.from("#myskills .skill",{
     scroller:".container",
     end:"top 25%"
   } 
+})
+
+gsap.from(".container #nav", {
+  y:-100,
+  duration:1,
+  opacity:0
+})
+
+gsap.to("#home .name, #home .developer", {
+  transform: "translateY(0%)",
+  delay: 0.5,
 })

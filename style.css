@@ -63,7 +63,7 @@ html, body {
 }
 
 #nav ul li {
-    background-color: #23cce2;
+    background: linear-gradient(#00a1ff,#00ff8f);
     padding: 10px 20px;
     border-radius: 100px;
     font-size: 16px;

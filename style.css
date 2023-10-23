@@ -268,10 +268,11 @@ a {
     height:150px;
     width: 150px;
     padding: 15px;
-    background-color: #413d3d;
     margin: 10px;
     border-radius: 6px;
-    font-weight: 500;
+    background-color: #dadada;
+    color: #000000;
+    font-weight: 600;
 }
 
 #skills #heading span {

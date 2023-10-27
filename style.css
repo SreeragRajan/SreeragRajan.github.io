@@ -31,7 +31,7 @@ html, body {
     top: 0;
     left: 0;
     z-index: -1;
-    filter: blur(5px);
+    filter: blur(8px);
 }
 
 .back img {
@@ -39,7 +39,7 @@ html, body {
     width: 100%;
     object-fit: cover;
     background-repeat: no-repeat;
-    filter: brightness(0.8);
+    filter: brightness(0.5);
 }
 
 .dots {

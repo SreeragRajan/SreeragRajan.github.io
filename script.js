@@ -1,3 +1,5 @@
+Shery.mouseFollower();
+
 function init(){
   gsap.registerPlugin(ScrollTrigger);
 

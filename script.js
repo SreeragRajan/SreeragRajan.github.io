@@ -1,3 +1,7 @@
+
+Shery.mouseFollower();
+
+
 function init(){
   gsap.registerPlugin(ScrollTrigger);
 
@@ -39,8 +43,6 @@ var cursor2 = document.querySelector(".cursor-blur")
 document.addEventListener("mousemove", (e) => {
     cursor.style.left = e.x + "px"
     cursor.style.top = e.y + "px"
-    cursor2.style.left = e.x+ "px"
-    cursor2.style.top = e.y+ "px"
 })
 
 gsap.to("#home .name", {
@@ -48,9 +50,8 @@ gsap.to("#home .name", {
   scrollTrigger: {
     trigger:"#home .name",
     scroller:".container",
-    // markers:true,
-    start:"top 20%",
-    end:"top 0%",
+    start:"top 40%",
+    end:"top 5%",
     scrub:2
   }
 })
@@ -58,11 +59,10 @@ gsap.to("#home .name", {
 gsap.to("#home .developer", {
   x:300,
   scrollTrigger: {
-    // markers:true,
     trigger:"#home .developer",
     scroller:".container",
-    start:"top 35%",
-    end:"top 15%",
+    start:"top 50%",
+    end:"top 10%",
     scrub:2
   }
 })
@@ -75,27 +75,27 @@ gsap.to(".scroll .arrow", {
 
 
 gsap.from("#about img", {
-  x:-200,
+  opacity:0,
+  x:-100,
   scrollTrigger: {
-    // markers:true,
     trigger:"#about img",
     scroller:".container",
-    scrub:2, 
-    start: "top 100%",
+    start: "top 80%",
     end: "top 50%"
-  }
+  },
+
 })
 
 gsap.from("#about p", {
-  x:200,
+  x:100,
+  opacity:0,
   scrollTrigger: {
-    // markers:true,
     trigger:"#about p",
     scroller:".container",
-    scrub:2, 
-    start: "top 100%",
+    start: "top 80%",
     end: "top 50%"
-  }
+  },
+
 })
 
 var tl = gsap.timeline()
@@ -109,4 +109,60 @@ tl.from("#myskills .skill",{
     scroller:".container",
     end:"top 25%"
   } 
+})
+
+gsap.from(".container #nav", {
+  y:-100,
+  duration:1,
+  opacity:0,
+  delay: 4,
+
+})
+
+
+gsap.from("#home .name, #home .developer, #home .greeting", {
+  y:100,
+  opacity:0,
+  delay: 4,
+  ease: "power4.inOut"
+})
+
+gsap.from(".loading h1", {
+    opacity:0,
+    delay: 1,
+    duration: 2,
+    stagger: 2
+})
+
+gsap.to(".loading", {
+    top: "-100%",
+    delay:3,
+    duration: 1,
+    ease: "power4.inOut"
+})
+
+gsap.from("#footer h1", {
+    y: -200,
+    opacity:0,
+    scrollTrigger:{
+        scrub:true,
+        trigger:"#footer h1",
+        scroller:".container",
+        top:"top 30%",
+        end:"top 25%",
+      } 
+})
+
+gsap.from(".skill-card", {
+    scale:0.5,
+    opacity:0,
+    scrollTrigger:{
+        scrub:true,
+        stagger:true,
+        trigger:".skill-card",
+        scroller:".container",
+        top:"top 10%",
+        end:"top 25%",
+      } ,
+      ease: "power4.inOut"
 })

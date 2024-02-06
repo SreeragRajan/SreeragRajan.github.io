@@ -1,5 +1,21 @@
 
-Shery.mouseFollower();
+// Shery.mouseFollower();
+
+
+var allH1 = document.querySelectorAll("#description h1")
+
+allH1.forEach(function(elem) {
+  var clutter = ""
+  var h1Text = elem.textContent
+  var splittedText = h1Text.split("")
+  splittedText.forEach(function(e){
+    clutter += `<span>${e}</span>`
+  })
+  elem.innerHTML = clutter
+  // console.log(elem)
+})
+
+
 
 
 function init(){
@@ -37,31 +53,73 @@ ScrollTrigger.refresh();
 init()
 
 
-var cursor = document.querySelector(".cursor")
-var cursor2 = document.querySelector(".cursor-blur")
+// cursor
+var cursor = document.getElementById("cursor");
+var resumebtn = document.querySelector("#resume");
 
-document.addEventListener("mousemove", (e) => {
-    cursor.style.left = e.x + "px"
-    cursor.style.top = e.y + "px"
+
+document.addEventListener("mouseenter", (e) => {
+  gsap.to(cursor, {
+    scale: 1,
+  })
 })
 
-gsap.to("#home .name", {
+
+document.addEventListener("mousemove", (e) => {
+  gsap.to(cursor, {
+    top: e.clientY + "px",
+    left: e.clientX + "px",
+  })
+})
+
+document.addEventListener("mouseleave", (e) => {
+  gsap.to(cursor, {
+    scale: 0,
+  })
+})
+
+
+
+resumebtn.addEventListener("mousemove", (e) => {
+  cursor.innerHTML = "<h4>Open</h4>"
+  gsap.to(cursor, {
+    height: "90px",
+    width: "90px",
+    backgroundColor: "black",
+    mixBlendMode: "normal",
+    
+  })
+})
+
+resumebtn.addEventListener("mouseleave", (e) => {
+  cursor.innerHTML = ""
+  gsap.to(cursor, {
+    height: "15px",
+    width: "15px",
+    backgroundColor: "white",
+    mixBlendMode: "difference",
+  })
+})
+
+
+
+gsap.to("#home .home-content .name", {
   x:-300,
   scrollTrigger: {
     trigger:"#home .name",
     scroller:".container",
-    start:"top 40%",
-    end:"top 5%",
+    start:"top 50%",
+    end:"top 0%",
     scrub:2
   }
 })
 
-gsap.to("#home .developer", {
+gsap.to("#home .home-content .developer", {
   x:300,
   scrollTrigger: {
     trigger:"#home .developer",
     scroller:".container",
-    start:"top 50%",
+    start:"top 60%",
     end:"top 10%",
     scrub:2
   }
@@ -73,45 +131,7 @@ gsap.to(".scroll .arrow", {
   yoyo:1,
 })
 
-
-gsap.from("#about img", {
-  opacity:0,
-  x:-100,
-  scrollTrigger: {
-    trigger:"#about img",
-    scroller:".container",
-    start: "top 80%",
-    end: "top 50%"
-  },
-
-})
-
-gsap.from("#about p", {
-  x:100,
-  opacity:0,
-  scrollTrigger: {
-    trigger:"#about p",
-    scroller:".container",
-    start: "top 80%",
-    end: "top 50%"
-  },
-
-})
-
-var tl = gsap.timeline()
-tl.from("#myskills .skill",{
-  y:60,
-  stagger:1,
-  opacity:0,
-  scrollTrigger:{
-    scrub:true,
-    trigger:"#myskills .skill",
-    scroller:".container",
-    end:"top 25%"
-  } 
-})
-
-gsap.from(".container #nav", {
+gsap.from(".container #home #nav", {
   y:-100,
   duration:1,
   opacity:0,
@@ -120,7 +140,7 @@ gsap.from(".container #nav", {
 })
 
 
-gsap.from("#home .name, #home .developer, #home .greeting", {
+gsap.from("#home .home-content .name, #home .home-content .developer, #home .home-content .greeting", {
   y:100,
   opacity:0,
   delay: 4,
@@ -129,9 +149,18 @@ gsap.from("#home .name, #home .developer, #home .greeting", {
 
 gsap.from(".loading h1", {
     opacity:0,
-    delay: 1,
-    duration: 2,
-    stagger: 2
+    delay: 1.3,
+    duration: 1,
+    x: 100,
+    ease: "power4.inOut"
+})
+
+gsap.to(".loading h1", {
+  delay: 2,
+  opacity:0,
+  duration: 1.3,
+  x: -50,
+  ease: "power4.inOut"
 })
 
 gsap.to(".loading", {
@@ -153,16 +182,109 @@ gsap.from("#footer h1", {
       } 
 })
 
-gsap.from(".skill-card", {
-    scale:0.5,
-    opacity:0,
-    scrollTrigger:{
-        scrub:true,
-        stagger:true,
-        trigger:".skill-card",
-        scroller:".container",
-        top:"top 10%",
-        end:"top 25%",
-      } ,
-      ease: "power4.inOut"
+
+
+gsap.to("#about h5", {
+  transform: 'translateY(0%)',
+  stagger: 0.2,
+  scrollTrigger: {
+    // markers: true,
+    trigger: "#about h5",
+    scroller: ".container",
+    start: "top 70%",
+
+
+  }
 })
+
+gsap.to("#description h1 span", {
+  color: "white",
+  stagger: 0.1,
+  scrollTrigger: {
+    trigger: "#description h1",
+    scroller: ".container",
+    // markers: true,
+    start: "top 50%",
+    end: "top 15%",
+    scrub: 3,
+  }
+})
+
+var links = document.querySelectorAll("#footer a")
+
+links.forEach((link) => {
+  link.addEventListener("mousemove", (e) => {
+    cursor.innerHTML = "<h4>Open</h4>"
+    gsap.to(cursor, {
+      height: "150px",
+      width: "150px",
+      color: "white",
+      backgroundColor: "black",
+      fontSize: "20px",
+      // backgroundColor: "rgba(255, 255, 255, 1)",
+      mixBlendMode: "normal",
+      
+    })
+  })
+  
+  link.addEventListener("mouseleave", (e) => {
+    cursor.innerHTML = ""
+    gsap.to(cursor, {
+      height: "15px",
+      width: "15px",
+      // color: "black",
+      fontSize: "14px",
+      backgroundColor: "white",
+      mixBlendMode: "difference",
+    })
+  })
+  
+})
+
+gsap.to(".projects-slider h1", {
+  transform: "translateX(-65%)",
+  scrollTrigger: {
+    // markers: true,
+    trigger: ".projects-slider",
+    scroller: ".container",
+    scrub: 4,
+    start: "top 0%",
+    end: "top -100%",
+    pin: true,
+
+  }
+})
+
+var tl = gsap.timeline({
+  scrollTrigger: {
+    // markers: true,
+    trigger: "#description",
+    scroller: ".container",
+    start: "top 30%",
+    end: "top 70%",
+    scrub: 2,
+    duration: 1,
+  }
+})
+
+tl.to(".container", {
+  backgroundColor: "black",
+})
+
+
+var tl2 = gsap.timeline({
+  scrollTrigger: {
+    // markers: true,
+    trigger: "#about",
+    scroller: ".container",
+    start: "top 30%",
+    end: "top 70%",
+    scrub: 2,
+    duration: 1,
+  }
+})
+
+tl2.to(".container", {
+  backgroundColor: "white",
+})
+

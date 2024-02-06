@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="c7uEQFDHDDElTcmmMKEYpZINzbCg7K8dhDtX17VQKjo" />
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
@@ -10,138 +11,134 @@
     <title>Sreerag Rajan</title>
 </head>
 <body>
-
+    
     <div class="loading">
-        <h1>SreeRag.</h1>
+        <h1>SreeRag</h1>
     </div>
     
+    <div id="cursor"></div>
     <div class="container">
-
-        <div class="back">
-            <img src="https://img.freepik.com/premium-photo/white-background-3d-render-waves-shapes-background-texture-clean-white-background-images-jpg_873925-101730.jpg" alt="">
-        </div>
-
+        
+        <div id="home">
             <div id="nav">
                 <h2>SreeRag.</h2>
-                <ul>
+                <ul  id="resume">
                     <li><a href="full stack resume.pdf" target="_blank">Resume</a></li>
                 </ul>
             </div>   
-                 
-            <div id="home">
-    
-                
-                <h2 class="greeting" style="text-align: center;">Hello,</h2>
-                
-                    <h1 class="name">I'm "<span>SreeRag</span>"</h1>
-                    <h1 class="developer">Web Developer</h1>
-            
-                <div class="scroll">
-                    <h4 class="scr-dn">Scroll Down</h4>
-                    <i class="fa-solid fa-arrow-down-long arrow"></i>
-                </div>
+           
+            <div class="home-content">
+
+                <h2 class="greeting" style="text-align: center;">🖐, my name is <span id="sreerag">"Sreerag"</span></h2>
+                <!-- I'm "<span>SreeRag</span>" -->
+                    <h1 class="name">Web Developer</h1>
+                    <h1 class="developer">& Programmer</h1>
+                    <div class="scroll">
+                        <h4 class="scr-dn">Scroll Down</h4>
+                        <i class="fa-solid fa-arrow-down-long arrow"></i>
+                    </div>
             </div>
+        
+    
+        </div>
 
+        <div id="description">
+            <h1>I create elevating digital</h1>
+            <h1>experiences that inspire and</h1>
+            <h1>connect with people through</h1>
+            <h1>modern web development.</h1>
+        </div>
 
+        
         <div id="about">
+                <!-- <h1>Who am I?</h1> -->
                 <h1>About Me</h1>
             
             <div class="about-me">
                 <div class="left"><img src="profile.jpeg" alt="profile-img"></div>
-                <div class="right">
-                    <p>I'm SreeRag. I'm a <span>Full Stack Web Developer</span>. I have been working as a web developer for quite some time now. I believe I am a very ambitious person who loves to work on making the website work well. Working on the web is my passion as I love to work on exciting projects.</p>
+                <div class="right"> 
+                    <div class="line">
+                        <h5>I'm SreeRag. I'm a "Front-end Web Developer".</h5>
+                    </div>
+                    <div class="line">
+                        <h5>I have been working as a web developer for</h5> 
+                    </div>
+                    <div class="line">
+                        <h5>quite some time now. I believe I am a very</h5>
+                    </div>
+                    <div class="line">
+                        <h5>ambitious person who loves to work on making</h5>
+                    </div>
+                    <div class="line">
+                        <h5>the website work well. Working on the web is</h5>
+                    </div>
+                    <div class="line">
+                        <h5>my passion as I love to work on exciting projects.</h5>
+                    </div>
 
                 </div>
             </div>
         </div>
-
-        <div id="skills">
+        <!-- <h1>Things I'm <span>good</span> at</h1> -->
+         <div id="skills">
             <div id="heading">
-                <h1>Things I'm <span>good</span> at</h1>
-                <h2>skills, interests, passion and hobbies</h2>
+                <h1>Skills</h1>
+                <h2>interests, passion and hobbies</h2>
             </div>
             <div id="skill-set">
-                <div class="skill-card"><img src="images/html-min.webp" alt="">HTML</div>
-                <div class="skill-card"><img src="images/css-min.webp" alt="">CSS</div>
-                <div class="skill-card"><img src="images/js-min.webp" alt="">Javascript</div>
-                <div class="skill-card"><img src="images/java-logo-1.webp" alt="">Java</div>
-                <div class="skill-card"> <img src="images/node-min.webp" alt="">NodeJS</div>
-                <div class="skill-card"><img src="images/mongodb-min.webp" alt="">MongoDB</div>
-                <div class="skill-card"> <img src="images/gsap-min.webp" alt="">GSAP</div>
-                
+
+                <!-- <h3>Html</h3>
+                <h3>Css</h3>
+                <h3>Javascript</h3>
+                <h3>Gsap</h3>
+                <h3>Reactjs</h3>
+                <h3>Nodejs</h3>
+                <h3>MongoDB</h3>
+                <h3>Expressjs</h3>
+                <h3>Tailwind</h3>
+                <h3>Java</h3>
+                <h3>Python</h3> -->
+             
+                <div class="frontend-skills">
+                    <!-- <h3>Frontend Technologies</h3> -->
+                    <div class="frontend-imgs">
+                        <img src="images/html.png" alt="">
+                        <img src="images/css.png" alt="">
+                        <img src="images/js-min.webp" alt="">
+                        <img src="images/java-logo-1.webp" alt="">
+                        <img src="images/node-min.webp" alt="">
+                        <img src="images/mongodb-min.webp" alt="">
+                        <img src="images/gsap-min.webp" alt="">
+                    </div>
+                </div>
             </div>
+        </div> 
+                        
+
+       
+        <div class="projects-slider">
+             <h1>Projects</h1>
         </div>
 
-        <div id="certifications">
-            <h1 id="cheading">Certifications</h1>
-            <div class="certification-box">
-                <div class="cbox" onclick="window.open('certificates/c.pdf', '_blank', 'noopener, noreferrer')">
-                    <div class="hover-effect"></div>
-                    <h1>2021</h1>
-                    <div class="inner-box"><h1>C</h1></div>
-                    <h1>Sololearn</h1>
-                </div>
-                <div class="cbox" onclick="window.open('certificates/python101.pdf', '_blank', 'noopener, noreferrer')">
-                    <div class="hover-effect"></div>
-                    <h1>2021</h1>
-                    <div class="inner-box"><h1>Python101</h1></div>
-                    <h1>IBM</h1>
-                </div>
-                <div class="cbox" onclick="window.open('certificates/webdev.pdf', '_blank', 'noopener, noreferrer')">
-                    <div class="hover-effect"></div>
-                    <h1>2023</h1>
-                    <div class="inner-box"><h1>Web Developement</h1></div>
-                    <h1>Udemy</h1>
-                </div>
-
-            </div>
-        </div>
 
         <div id="projects">
-            <h1>Projects</h1>
-            <div class="cards">
-                <div class="card-item">
-                    <div class="text-content">
-                        <h2>Title</h2>
-                        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, soluta.</h3>
-                    </div>
+            <h1>Recent Works</h1>
+
+            <!-- <div class="wrapper">
+                <div class="card">
+                    <div class="img-box"></div>
+                    <h1>Chat App</h1>
                 </div>
-                <div class="card-item">
-                    <div class="text-content">
-                        <h2>Title</h2>
-                         <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, soluta.</h3>
-                    </div>
-                    
+                <div class="card">
+                    <div class="img-box"></div>
+                    <h1>Netflix Clone</h1>
                 </div>
-                <div class="card-item">
-                    <div class="text-content">
-                        <h2>Title</h2>
-                        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, soluta.</h3>
-                    </div>
-                    
+                <div class="card">
+                    <div class="img-box"></div>
+                    <h1>Twitter Clone</h1>
                 </div>
-                <div class="card-item">
-                    <div class="text-content">
-                        <h2>Title</h2>
-                        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, soluta.</h3>
-                    </div>
-                    
-                </div>
-                <div class="card-item">
-                    <div class="text-content">
-                        <h2>Title</h2>
-                        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, soluta.</h3>
-                    </div>
-                    
-                </div>
-                <div class="card-item">
-                    <div class="text-content">
-                        <h2>Title</h2>
-                        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, soluta.</h3>
-                    </div>
-                    
-                </div>
-            </div>
+            </div> -->
+            
         </div>
         
         <div id="footer">
@@ -150,7 +147,7 @@
             </h1>
                 <h4>created with 💓 by me</h4
         </div>
-    </div>
+    </div> 
 
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
@@ -161,5 +158,3 @@
 </body>
 </html>
             
-
-

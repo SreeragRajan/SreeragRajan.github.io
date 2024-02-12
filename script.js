@@ -206,10 +206,9 @@ links.forEach((link) => {
     gsap.to(cursor, {
       height: "150px",
       width: "150px",
-      color: "white",
-      backgroundColor: "black",
+      color: "black",
+      backgroundColor: "white",
       fontSize: "20px",
-      // backgroundColor: "rgba(255, 255, 255, 1)",
       mixBlendMode: "normal",
       
     })
@@ -220,7 +219,6 @@ links.forEach((link) => {
     gsap.to(cursor, {
       height: "15px",
       width: "15px",
-      // color: "black",
       fontSize: "14px",
       backgroundColor: "white",
       mixBlendMode: "difference",

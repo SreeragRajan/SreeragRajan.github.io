@@ -56,6 +56,18 @@ init()
 // cursor
 var cursor = document.getElementById("cursor");
 var resumebtn = document.querySelector("#resume");
+var progress = document.querySelector(".progressbar");
+
+var setwidth = 0;
+setInterval(function() {
+  if(setwidth < 100) {
+    setwidth++;
+     progress.style.width = `${setwidth}%`;
+  } 
+  else {
+    progress.style.width = `${setwidth}%`;
+  }
+}, 30)
 
 
 document.addEventListener("mouseenter", (e) => {
@@ -149,40 +161,16 @@ gsap.from("#home .home-content .name, #home .home-content .developer, #home .hom
 
 gsap.from(".loading h1", {
     opacity:0,
-    delay: 1.3,
-    duration: 1,
-    x: 100,
+    duration: 2,
     ease: "power4.inOut"
-})
-
-gsap.to(".loading h1", {
-  delay: 2,
-  opacity:0,
-  duration: 1.3,
-  x: -50,
-  ease: "power4.inOut"
 })
 
 gsap.to(".loading", {
     top: "-100%",
-    delay:3,
+    delay:3.3,
     duration: 1,
     ease: "power4.inOut"
 })
-
-gsap.from("#footer h1", {
-    y: -200,
-    opacity:0,
-    scrollTrigger:{
-        scrub:true,
-        trigger:"#footer h1",
-        scroller:".container",
-        top:"top 30%",
-        end:"top 25%",
-      } 
-})
-
-
 
 gsap.to("#about h5", {
   transform: 'translateY(0%)',

@@ -12,20 +12,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    
 }
-/* 
-*::selection {
-    background-color: rgb(94, 90, 86);
-    color: rgb(255, 255, 255);
-} */
+
 
 html, body {
     height: 100%;
     width: 100%;
-    /* cursor: none; */
     background-color: #ffffff;
-    overflow-x: hidden;;
+    overflow-x: hidden;
 }
 
 #cursor {
@@ -63,7 +57,6 @@ html, body {
     color: rgb(255, 255, 255);
     font-size: 1.5vw;
     letter-spacing: 1px;
-    display: flex;
     gap: 30px;
 }
 

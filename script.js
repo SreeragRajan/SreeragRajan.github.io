@@ -220,6 +220,7 @@ links.forEach((link) => {
       height: "15px",
       width: "15px",
       fontSize: "14px",
+      color: "white",
       backgroundColor: "white",
       mixBlendMode: "difference",
     })

@@ -19,7 +19,6 @@ html, body {
     height: 100%;
     width: 100%;
     background-color: #ffffff;
-    overflow-x: hidden;;
 }
 
 #cursor {
@@ -32,7 +31,7 @@ html, body {
     position: absolute;
     top:0;
     left:0;
-    z-index: 999;
+    z-index: 999999;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,10 +58,9 @@ html, body {
 }
 
 .loading h1 {
-    letter-spacing: -3px;
+    letter-spacing: -2px;
     font-size: 4.5vw;
-    font-weight: 400;
-    /* text-transform: uppercase; */
+    font-weight: 500;
 }
 
 .loading .progress {
@@ -213,7 +211,7 @@ html, body {
     justify-content: center;
     min-height: 100vh;
     width: 100%;
-    padding: 5vw
+    padding: 4vw
 }
 
 #about h1 {
@@ -283,7 +281,6 @@ html, body {
     width: 100%;
     color: rgb(0, 0, 0);
     padding: 5vw;
-    /* gap: 50px; */
 }
 
 #skill-set {
@@ -293,8 +290,6 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-        /* background-color: #ff8f8f; */
-
 }
 
 #skills #heading h1 {
@@ -472,177 +467,345 @@ html, body {
 
 
 @media (max-width:800px) {
-    #home .greeting {
-        font-size: 6vw;
-        margin-bottom: 10px;
-    }
-    #home .name {
-        font-size: 8vw;
-    }
 
-    #home .developer {
-        font-size: 9vw;
-    }
-
-    #about .left{
-        width: 50%;
-    } 
-    #about .right{
-        width: 50%;
-    } 
-
-    #about h1 {
-        width: 100%;
-        text-align: center;
-        font-size: 5vw;
-        margin: 2vw 0;
-    }
-
-    #about img {
-        filter: grayscale(0);
-        height: 300px;
-    }
-
-    #about .right h5 {
-        white-space: nowrap;
-        font-size: 2vw;
-        letter-spacing: 0.8; 
-        line-height: 1.3;
+    .loading {
+        gap: 20px;
     }
     
+    .loading h1 {
+        letter-spacing: 0; 
+        font-size: 4.5vw;
+        font-weight: 400;
+    }
+    
+    .loading .progress {
+        width: 60%;
+        height: 30px;
+    }
+      
+
+    #home .greeting {
+        font-size: 3.5vw;
+        margin-bottom: 10px;
+    }
+    
+    #home h1 {
+        line-height: 8.5vw;
+        font-size: 8vw;
+        letter-spacing: -2px;
+    }
+    
+    .scr-dn {
+        font-size: 2vw;
+    }
+    
+    .arrow {
+        font-size: 3vw;
+    }
+
+    #about{
+        padding: 2vw;
+    }
+    
+    #about h1 {
+        font-size: 6vw;
+        letter-spacing: -3px;
+    }
+    
+    
+    .about-me {
+        height: 100%;
+        width: 100%;
+        display: flex;    
+    }
+    
+    .about-me .left {
+        height: 100vh;
+        width: 40%;
+    }
+    
+    .about-me .right {
+        width: 60%;
+        padding: 3vw;
+    }
+    
+    .about-me .right h2 {
+        font-size: 4vw;
+        margin-bottom: 2vw;
+    }
+    
+    .about-me .right p {
+        font-size: 2.2vw;
+        line-height: 3.3vw;
+    }
+    
+    .about-me .right p:nth-last-child(1) {
+        margin-top: 15px;
+    }
+    
+    #skills {
+        min-height: 100vh;
+        width: 100%;
+        color: rgb(0, 0, 0);
+        padding: 3vw;
+    }
+    
+    
     #skills #heading h1 {
+        font-size: 6vw;
+        margin-bottom: 8px;
+        letter-spacing: -2px;
+    }
+    
+    #skills #heading h2 {
+        font-size: 3vw;
+    }
+    
+    #skill-set .frontend-imgs{
+        gap: 6vw;
+    }
+    
+    #skill-set .frontend-imgs img {
+        height: 7vw;
+    }
+    
+    #skill-set .frontend-imgs i {
         font-size: 7vw;
     }
 
-    #skill-set {
-        padding: 3vw;
+    #description h1 {
+        font-size: 6vw;
+        line-height: 6.5vw;
     }
 
-    #skills img {
-        height: 60px;
-        width: 60px;
+    #projects {
+        min-height: 100vh;
+        width: 100%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding-top: 3vw;
     }
-
-    #skills .skill-card {
-        height:100px;
-        width: 100px;
-        padding: 60px;
-        font-size: 14px;
+    
+    #projects h1 {   
+        font-size: 6vw;
+        margin-bottom: 10px;
+        letter-spacing: -3px;
     }
-
-    #footer {
-        height: 100vh;
+    
+    #projects .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10vw;
     }
+    
+    #projects .wrapper .card {
+        height: 80vw;
+        width: 50vw;
+    }
+    
+    #projects .wrapper .card h2 {
+        font-size: 4vw;
+    }
+    
     #footer h1 {
-        font-size: 7.5vw;
+        font-size: 6vw;
     }
 
 }
 
 @media (max-width:680px) {
 
-    #about {
-        padding: 0px;
+    #cursor {
+        display: none;
     }
 
     #about .left{
-        height: 400px;
-        width: 50%;
+        height: 80vh;
+        width: 40%;
     } 
     #about .right{
-        width: 50%;
+        width: 60%;
     } 
-
-    #about h1 {
-        width: 100%;
-        text-align: center;
-        font-size: 5vw;
-        margin: 2vw 0;
-    }
-
-    #about img {
-        filter: grayscale(0);
-        height: 40vw;
-    }
-
-    #about .right p {
-        font-size: 2.5vw;
-        letter-spacing: 0.5;
-        line-height: 1.3;
-        word-spacing: 0;
-    }
-
 
 }
 
 @media (max-width:480px) {
 
+    .loading {
+        gap: 20px;
+    }
     
-    #home .name {
-        font-size: 10vw;
+    .loading h1 {
+        font-size: 6.5vw;
     }
-    #home .developer {
-        font-size: 11vw;
-    }
-    #home .greeting {
-        font-size: 8vw;
-    }
-    #home .scroll {
-
-        margin-top: 35vw;
+    
+    .loading .progress {
+        width: 60%;
+        height: 20px;
     }
 
+    #nav {
+        height: 50px;
+    }
 
-    #about .about-me .left, #about .about-me .right{
-        width: 100%;
-        height: 50vh;
-    }
-    #about .about-me {
-        flex-direction: column;
-    }
-    #about h1 {
+    #nav h2 {
         font-size: 7vw;
     }
-    #about .left img {
-        height: 70vw;
-        width: 70vw;
-        border-radius: 50%;
+
+    #nav ul li {
+        padding: 5px 8px;
     }
-    #about .about-me .right p{
+
+    #cursor {
+        display: none;
+    }
+      
+
+    #home .greeting {
         font-size: 5vw;
+        margin-bottom: 10px;
+    }
+    
+    #home h1 {
+        font-size: 11vw;
+        line-height: 11vw;
+        letter-spacing: -2px;
+    }
+    
+    .scr-dn {
+        font-size: 4vw;
+    }
+    
+    .arrow {
+        font-size: 6vw;
+    }
+
+    #description h1 {
+        font-size: 3vw;
+        line-height: 6.5vw;
+    }
+
+    #about {
+        min-height: 100vh;
+        width: 100%;
+        
+    }
+
+    #about h1 {
+        font-size: 8vw;
+        letter-spacing: -2px;
+    }
+
+    #about .about-me {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #about .left {
+        height: 40%;
+        width: 60%;
+    }
+
+    #about .right {
+        height: 50%;
+        width: 100%;
+        padding: 3vw;
+    }
+    
+    #about .right h2 {
+        font-size: 5vw;
+        margin-bottom: 2vw;
         text-align: center;
     }
-
+    
+    #about .right p {
+        font-size: 3.6vw;
+        line-height: 4.5vw;
+        text-align: center;
+    }
+    
+    #about .right p:nth-last-child(1) {
+        margin-top: 15px;
+    }
+    
+    #skills {
+        color: rgb(0, 0, 0);
+        padding: 3vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    
     #skills #heading h1 {
-        font-size: 9vw;
+        font-size: 8vw;
+        margin-bottom: 8px;
+        letter-spacing: -2px;
     }
-
+    
     #skills #heading h2 {
-        font-size: 4.8vw;
-        opacity: 0.5;
+        font-size: 4vw;
     }
 
-    #skill-set {
-        padding: 1vw;
+    #skills h4 {
+        font-size: 12px;
+    }
+    
+    #skill-set .frontend-imgs{
+        margin-top: 3vw;
+        gap: 10vw;
+    }
+    
+    #skill-set .frontend-imgs img {
+        height: 10vw;
+    }
+    
+    #skill-set .frontend-imgs i {
+        font-size: 10vw;
     }
 
-    #skills img {
-        height: 50px;
-        width: 50px;
+    #description h1 {
+        font-size: 6vw;
+        line-height: 6.5vw;
     }
 
-    #skills .skill-card {
-        height:50px;
-        width: 50px;
-        padding: 55px;
-        font-size: 10px;
+    #projects {
+        min-height: 100vh;
+        width: 100%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        padding-top: 3vw;
     }
-
-   
+    
+    #projects h1 {   
+        font-size: 8vw;
+        margin-bottom: 10px;
+        letter-spacing: 0px;
+    }
+    
+    #projects .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10vw;
+    }
+    
+    #projects .wrapper .card {
+        height: 600px;
+        width: 300px;
+    }
+    
+    #projects .wrapper .card h2 {
+        font-size: 6vw;
+    }
+    
     #footer h1 {
-
-        font-size: 12vw;
-        line-height: 1.3;
+        font-size: 10vw;
     }
 }
 
@@ -657,6 +820,6 @@ html, body {
 }
 
 ._canvas_container {
-    z-index: 999999 !important;
+    z-index: 999 !important;
     pointer-events: none;
 }

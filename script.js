@@ -118,7 +118,6 @@ resumebtn.addEventListener("mouseleave", (e) => {
 })
 
 
-
 gsap.to("#home .home-content .name", {
   x:-300,
   scrollTrigger: {
@@ -173,15 +172,6 @@ gsap.from(".loading h1", {
 })
 
 
-
-// gsap.to(".loading h1", {
-//   delay: 2,
-//   opacity:0,
-//   duration: 1.3,
-//   x: -50,
-//   ease: "power4.inOut"
-// })
-
 gsap.to(".loading", {
     top: "-100%",
     delay:3.3,
@@ -203,19 +193,22 @@ gsap.to("#description h1 span", {
   }
 })
 
-gsap.to("#about img", {
-  transform: "translatey(-20%)",
-  scrollTrigger: {
-    // markers: true,
-    trigger: "#about",
-    scroller: ".container",
-    scrub: 2,
-    start: "25% 10%",
-    end: "20% -80%",
-    pin: true,
+if(window.innerWidth > 500) {
+  gsap.to("#about img", {
+    transform: "translatey(-20%)",
+    scrollTrigger: {
+      // markers: true,
+      trigger: "#about",
+      scroller: ".container",
+      scrub: 2,
+      start: "25% 10%",
+      end: "20% -80%",
+      pin: true,
+  
+    }
+  })
 
-  }
-})
+}
 
 
 var links = document.querySelectorAll("#footer a")
@@ -224,11 +217,11 @@ links.forEach((link) => {
   link.addEventListener("mousemove", (e) => {
     cursor.innerHTML = "<h4>Open</h4>"
     gsap.to(cursor, {
-      height: "150px",
-      width: "150px",
+      height: "10vw",
+      width: "10vw",
       color: "black",
       backgroundColor: "white",
-      fontSize: "20px",
+      fontSize: "1.5vw",
       mixBlendMode: "normal",
       
     })
@@ -240,6 +233,7 @@ links.forEach((link) => {
       height: "15px",
       width: "15px",
       fontSize: "14px",
+      color: "white",
       backgroundColor: "white",
       mixBlendMode: "difference",
     })

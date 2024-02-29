@@ -58,17 +58,21 @@ var cursor = document.getElementById("cursor");
 var resumebtn = document.querySelector("#resume");
 var progress = document.querySelector(".progressbar");
 
-var setwidth = 0;
-setInterval(function() {
-  if(setwidth < 100) {
-    setwidth++;
-     progress.style.width = `${setwidth}%`;
-  } 
-  else {
-    progress.style.width = `${setwidth}%`;
-  }
-}, 30)
+function progressAnimation () {
+  var setwidth = 0;
+  setInterval(function() {
+    if(setwidth < 100) {
+      setwidth++;
+       progress.style.width = `${setwidth}%`;
+    } 
+    else {
+      progress.style.width = `${setwidth}%`;
+    }
+  }, 30)
 
+}
+
+progressAnimation();
 
 document.addEventListener("mouseenter", (e) => {
   gsap.to(cursor, {
@@ -161,9 +165,22 @@ gsap.from("#home .home-content .name, #home .home-content .developer, #home .hom
 
 gsap.from(".loading h1", {
     opacity:0,
+    // scale: 0,
+    // delay: 1.3,
     duration: 2,
+    // x: 100,
     ease: "power4.inOut"
 })
+
+
+
+// gsap.to(".loading h1", {
+//   delay: 2,
+//   opacity:0,
+//   duration: 1.3,
+//   x: -50,
+//   ease: "power4.inOut"
+// })
 
 gsap.to(".loading", {
     top: "-100%",
@@ -172,18 +189,6 @@ gsap.to(".loading", {
     ease: "power4.inOut"
 })
 
-gsap.to("#about h5", {
-  transform: 'translateY(0%)',
-  stagger: 0.2,
-  scrollTrigger: {
-    // markers: true,
-    trigger: "#about h5",
-    scroller: ".container",
-    start: "top 70%",
-
-
-  }
-})
 
 gsap.to("#description h1 span", {
   color: "white",
@@ -197,6 +202,21 @@ gsap.to("#description h1 span", {
     scrub: 3,
   }
 })
+
+gsap.to("#about img", {
+  transform: "translatey(-20%)",
+  scrollTrigger: {
+    // markers: true,
+    trigger: "#about",
+    scroller: ".container",
+    scrub: 2,
+    start: "25% 10%",
+    end: "20% -80%",
+    pin: true,
+
+  }
+})
+
 
 var links = document.querySelectorAll("#footer a")
 
@@ -220,7 +240,6 @@ links.forEach((link) => {
       height: "15px",
       width: "15px",
       fontSize: "14px",
-      color: "white",
       backgroundColor: "white",
       mixBlendMode: "difference",
     })
@@ -228,8 +247,24 @@ links.forEach((link) => {
   
 })
 
+gsap.from("#skills #skill-set #skill-card", {
+  x: -100,
+  opacity: 0,
+  stagger: 0.2,
+  duration: 1.5,
+  ease: "Power4InOut",
+  scrollTrigger: {
+    trigger: "#skill-card",
+    scroller: ".container",
+    // markers: true,
+    scrub: 2,
+    start: "-110% 50%",
+    end: "top 60%",
+  }
+})
+
 gsap.to(".projects-slider h1", {
-  transform: "translateX(-65%)",
+  transform: "translateX(-47%)",
   scrollTrigger: {
     // markers: true,
     trigger: ".projects-slider",
@@ -275,3 +310,12 @@ tl2.to(".container", {
   backgroundColor: "white",
 })
 
+
+function sheryAnimation () {
+  Shery.imageEffect(".img-box", {
+    style: 5,
+    gooey: true,
+  })
+}
+
+sheryAnimation();

@@ -164,10 +164,7 @@ gsap.from("#home .home-content .name, #home .home-content .developer, #home .hom
 
 gsap.from(".loading h1", {
     opacity:0,
-    // scale: 0,
-    // delay: 1.3,
     duration: 2,
-    // x: 100,
     ease: "power4.inOut"
 })
 
@@ -186,18 +183,16 @@ gsap.to("#description h1 span", {
   scrollTrigger: {
     trigger: "#description h1",
     scroller: ".container",
-    // markers: true,
     start: "top 50%",
     end: "top 15%",
     scrub: 3,
   }
 })
 
-if(window.innerWidth > 500) {
+if(window.innerWidth > "500px") {
   gsap.to("#about img", {
     transform: "translatey(-20%)",
     scrollTrigger: {
-      // markers: true,
       trigger: "#about",
       scroller: ".container",
       scrub: 2,
@@ -257,23 +252,8 @@ gsap.from("#skills #skill-set #skill-card", {
   }
 })
 
-gsap.to(".projects-slider h1", {
-  transform: "translateX(-47%)",
-  scrollTrigger: {
-    // markers: true,
-    trigger: ".projects-slider",
-    scroller: ".container",
-    scrub: 4,
-    start: "top 0%",
-    end: "top -100%",
-    pin: true,
-
-  }
-})
-
 var tl = gsap.timeline({
   scrollTrigger: {
-    // markers: true,
     trigger: "#description",
     scroller: ".container",
     start: "top 30%",
@@ -290,7 +270,6 @@ tl.to(".container", {
 
 var tl2 = gsap.timeline({
   scrollTrigger: {
-    // markers: true,
     trigger: "#about",
     scroller: ".container",
     start: "top 30%",

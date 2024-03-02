@@ -189,7 +189,7 @@ gsap.to("#description h1 span", {
   }
 })
 
-if(window.innerWidth > "500px") {
+if(window.innerWidth > 500) {
   gsap.to("#about img", {
     transform: "translatey(-20%)",
     scrollTrigger: {

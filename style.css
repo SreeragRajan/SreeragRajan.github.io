@@ -1,5 +1,4 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
@@ -781,6 +780,10 @@ html, body {
 }
 
 @media only screen and (max-width:480px) {
+    
+    #cursor {
+        display: none;
+    }
 
     .loading {
         gap: 20px;
@@ -807,10 +810,6 @@ html, body {
         padding: 5px 8px;
     }
 
-    #cursor {
-        display: none;
-    }
-      
 
     #home .greeting {
         font-size: 5vw;
@@ -831,15 +830,20 @@ html, body {
         font-size: 6vw;
     }
 
+    #description {
+        height: 60vh;
+        background-color: white;
+    }
+
     #description h1 {
+        color: #8d8b8b;
         font-size: 3vw;
         line-height: 6.5vw;
     }
 
     #about {
-        min-height: 100vh;
+        height: 80vh;
         width: 100%;
-        
     }
 
     #about h1 {
@@ -861,12 +865,12 @@ html, body {
     }
     
     #about .left {
-        height: 40%;
+        height: 40vh;
         width: 60%;
     }
 
     #about .right {
-        height: 50%;
+        height: 40vh;
         width: 100%;
         padding: 3vw;
     }
@@ -921,16 +925,16 @@ html, body {
     }
     
     #skill-set .frontend-imgs{
-        margin-top: 3vw;
+        margin-top: 50px;
         gap: 10vw;
     }
     
     #skill-set .frontend-imgs img {
-        height: 10vw;
+        height: 8vw;
     }
     
     #skill-set .frontend-imgs i {
-        font-size: 10vw;
+        font-size: 8vw;
     }
 
     #description h1 {
@@ -984,18 +988,3 @@ html, body {
 }
 
 
-
-.example {
-    display: -ms-grid;
-    display: grid;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-    background: -o-linear-gradient(top, white, black);
-    background: linear-gradient(to bottom, white, black);
-}

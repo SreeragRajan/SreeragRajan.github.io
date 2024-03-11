@@ -176,31 +176,51 @@ function navAnimation() {
 }
 
 function descAnimation() {
-  gsap.to("#description h1 span", {
-    color: "white",
-    stagger: 0.1,
-    scrollTrigger: {
-      trigger: "#description h1",
-      scroller: ".container",
-      // markers: true,
-      start: "top 50%",
-      end: "top 15%",
-      scrub: 3,
-    },
+
+  gsap.matchMedia().add("(max-width: 500px)", () => {
+    gsap.to("#description h1 span", {
+      color: "black",
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: "#description h1",
+        scroller: ".container",
+        start: "top 50%",
+        end: "top 15%",
+        scrub: 3,
+      },
+    });
+  })
+
+  gsap.matchMedia().add("(min-width: 500px)", () => {
+    gsap.to("#description h1 span", {
+      color: "white",
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: "#description h1",
+        scroller: ".container",
+        start: "top 50%",
+        end: "top 15%",
+        scrub: 3,
+      },
+    });
   });
 }
 
 function imgAnimation() {
-  gsap.to("#about img", {
-    transform: "translateY(-20%)",
-    scrollTrigger: {
-      trigger: "#about",
-      scroller: ".container",
-      scrub: 2,
-      start: "25% 10%",
-      end: "20% -80%",
-      pin: true,
-    },
+  let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 480px)", () => {
+    gsap.to("#about img", {
+      transform: "translateY(-20%)",
+      scrollTrigger: {
+        trigger: "#about",
+        scroller: ".container",
+        scrub: 2,
+        start: "25% 10%",
+        end: "20% -80%",
+        pin: true,
+      },
+    });
   });
 }
 
@@ -251,43 +271,48 @@ function skillAnimation() {
 }
 
 function sheryAnimation() {
-  Shery.imageEffect(".img-box", {
-    style: 5,
-    gooey: true,
+  gsap.matchMedia().add("(min-width: 600px)", () => {
+    Shery.imageEffect(".img-box", {
+      style: 5,
+      gooey: true,
+    });
   });
 }
 
 function backgroundColorAnimation() {
-  var tl = gsap.timeline({
-    scrollTrigger: {
-      // markers: true,
-      trigger: "#description",
-      scroller: ".container",
-      start: "top 30%",
-      end: "top 70%",
-      scrub: 2,
-      duration: 1,
-    },
-  });
 
-  tl.to(".container", {
-    backgroundColor: "black",
-  });
+  gsap.matchMedia().add("(min-width: 500px)", () => {
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        // markers: true,
+        trigger: "#description",
+        scroller: ".container",
+        start: "top 30%",
+        end: "top 70%",
+        scrub: 2,
+        duration: 1,
+      },
+    });
 
-  var tl2 = gsap.timeline({
-    scrollTrigger: {
-      // markers: true,
-      trigger: "#about",
-      scroller: ".container",
-      start: "top 30%",
-      end: "top 70%",
-      scrub: 2,
-      duration: 1,
-    },
-  });
+    tl.to(".container", {
+      backgroundColor: "black",
+    });
 
-  tl2.to(".container", {
-    backgroundColor: "white",
+    var tl2 = gsap.timeline({
+      scrollTrigger: {
+        // markers: true,
+        trigger: "#about",
+        scroller: ".container",
+        start: "top 30%",
+        end: "top 70%",
+        scrub: 2,
+        duration: 1,
+      },
+    });
+
+    tl2.to(".container", {
+      backgroundColor: "white",
+    });
   });
 }
 

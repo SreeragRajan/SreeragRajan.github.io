@@ -324,7 +324,6 @@ function resumeAnimation() {
       start: "0% 0%",
       end: "120% 100%",
       scrub: true,
-      markers: true,
     },
   });
 

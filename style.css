@@ -799,6 +799,7 @@ html, body {
     }
 
     #nav {
+        z-index: 999999;
         height: 50px;
     }
 
@@ -838,6 +839,7 @@ html, body {
     #description h1 {
         color: #8d8b8b;
         font-size: 3vw;
+        font-weight: 500;
         line-height: 6.5vw;
     }
 

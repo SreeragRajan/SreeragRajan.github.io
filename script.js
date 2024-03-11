@@ -316,9 +316,8 @@ function backgroundColorAnimation() {
   });
 }
 
-gsap.matchMedia().add("(min-width: 500px)", () => {
-  init();
-})
+
+init();
 customCursor();
 loadingAnimation();
 progressAnimation();

@@ -15,6 +15,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+*::selection {
+  background-color: rgb(87, 87, 87);
+  color: white;
+}
+
 html,
 body {
   height: 100%;

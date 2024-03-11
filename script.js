@@ -159,7 +159,7 @@ function loadingAnimation() {
   });
 
   gsap.to(".loading", {
-    top: "-100%",
+    top: "-120%",
     delay: 3.3,
     duration: 1,
     ease: "power4.inOut",

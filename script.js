@@ -344,7 +344,6 @@ customCursor();
 loadingAnimation();
 progressAnimation();
 navAnimation();
-resumebtnEffect();
 homeAnimation();
 backgroundColorAnimation();
 textEffect();

@@ -541,9 +541,63 @@ html, body {
        object-fit: cover;
 }
 
-/* #projects .wrapper .card:nth-child(2) {
-    margin-top: 20px;
-} */
+#resume-page {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 5vw;
+  }
+
+  #resume-page h1 {
+    text-transform: uppercase;
+    font-size: 5vw;
+    opacity: 0.8;
+  }
+
+  .resume {
+    width: 50%;
+    min-height: 105vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img {
+    width: 100%;
+    margin: 0;
+  }
+
+  .resume img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    transform-origin: top;
+  }
+
+  .img2,
+  .img3,
+  .img4 {
+    transform: perspective(1000px) rotateX(-90deg);
+  }
+
+  #download-btn {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    margin-top: 80px;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 20px;
+  }
+
 
 #footer {
     color: rgb(255, 255, 255);

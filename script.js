@@ -316,6 +316,29 @@ function backgroundColorAnimation() {
   });
 }
 
+function resumeAnimation() {
+  let tl5 = gsap.timeline({
+    scrollTrigger: {
+      scroller: ".container",
+      trigger: "#resume-page",
+      start: "0% 0%",
+      end: "120% 100%",
+      scrub: true,
+      markers: true,
+    },
+  });
+
+  tl5.to(".img2", {
+    rotateX: "0deg",
+  })
+  .to(".img3", {
+      rotateX: "0deg",
+  })
+  .to(".img4", {
+      rotateX: "0deg",
+  });
+}
+
 
 init();
 customCursor();
@@ -330,6 +353,7 @@ descAnimation();
 imgAnimation();
 skillAnimation();
 sheryAnimation();
+resumeAnimation();
 footerAnimation();
 
 // gsap.to(".projects-slider h1", {
